@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Abdullo Qadridinov - Computer Science and Information Systems student, developer and technology enthusiast."
+    >
+
+    <title>Abdullo Qadridinov | Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="background">
+
+    <div class="gradient-orb orb-one"></div>
+    <div class="gradient-orb orb-two"></div>
+    <div class="gradient-orb orb-three"></div>
+
+</div>
+
+
+<div class="overlay" id="overlay"></div>
+
+
+<aside class="sidebar" id="sidebar">
+
+    <div class="sidebar-header">
+
+        <a href="#home" class="logo">
+
+            <div class="logo-icon">
+                A
+            </div>
+
+            <div class="logo-name">
+                Abdullo<span>.</span>
+            </div>
+
+        </a>
+
+        <button
+            class="close-sidebar"
+            id="closeSidebar"
+            aria-label="Close menu"
+        >
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+    </div>
+
+
+    <div class="profile-card">
+
+        <div class="profile-avatar">
+            A
+        </div>
+
+        <div class="profile-info">
+
+            <h3>Abdullo Qadridinov</h3>
+
+            <p>
+                CS & Information Systems
+            </p>
+
+        </div>
+
+        <div class="online-dot"></div>
+
+    </div>
+
+
+    <nav class="navigation">
+
+        <div class="navigation-title">
+            MAIN MENU
+        </div>
+
+
+        <a href="#home" class="nav-link active">
+
+            <i class="fa-solid fa-house"></i>
+
+            <span>Home</span>
+
+        </a>
+
+
+        <a href="#about" class="nav-link">
+
+            <i class="fa-solid fa-user"></i>
+
+            <span>About Me</span>
+
+        </a>
+
+
+        <a href="#projects" class="nav-link">
+
+            <i class="fa-solid fa-code"></i>
+
+            <span>Projects</span>
+
+            <span class="nav-badge">
+                8+
+            </span>
+
+        </a>
+
+
+        <a href="#skills" class="nav-link">
+
+            <i class="fa-solid fa-chart-simple"></i>
+
+            <span>Skills</span>
+
+        </a>
+
+
+        <a href="#education" class="nav-link">
+
+            <i class="fa-solid fa-graduation-cap"></i>
+
+            <span>Education</span>
+
+        </a>
+
+
+        <div class="navigation-title workspace-title">
+            CONNECT
+        </div>
+
+
+        <a href="#contact" class="nav-link">
+
+            <i class="fa-solid fa-envelope"></i>
+
+            <span>Contact</span>
+
+        </a>
+
+
+        <a
+            href="https://github.com/"
+            target="_blank"
+            class="nav-link"
+        >
+
+            <i class="fa-brands fa-github"></i>
+
+            <span>GitHub</span>
+
+        </a>
+
+
+        <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+            class="nav-link"
+        >
+
+            <i class="fa-brands fa-linkedin"></i>
+
+            <span>LinkedIn</span>
+
+        </a>
+
+    </nav>
+
+
+    <!-- Sidebar Bottom -->
+
+    <div class="sidebar-bottom">
+
+        <div class="availability-card">
+
+            <div class="availability-icon">
+                <i class="fa-solid fa-sparkles"></i>
+            </div>
+
+            <div>
+
+                <strong>
+                    Open to opportunities
+                </strong>
+
+                <small>
+                    Let's build something
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="theme-toggle"
+            id="themeToggle"
+        >
+
+            <i class="fa-solid fa-moon" id="themeIcon"></i>
+
+            <span>
+                Change Theme
+            </span>
+
+        </button>
+
+    </div>
+
+</aside>
+
+
+<!-- =========================================
+     MOBILE MENU BUTTON
+========================================= -->
+
+<button
+    class="mobile-menu"
+    id="mobileMenu"
+    aria-label="Open menu"
+>
+
+    <i class="fa-solid fa-bars"></i>
+
+</button>
+
+
+<!-- =========================================
+     MAIN CONTENT
+========================================= -->
+
+<main class="main-content">
+
+
+<!-- =========================================
+     HOME
+========================================= -->
+
+<section
+    class="section home-section"
+    id="home"
+>
+
+    <div class="home-content">
+
+        <div class="welcome-label">
+
+            <span class="pulse"></span>
+
+            AVAILABLE FOR NEW OPPORTUNITIES
+
+        </div>
+
+
+        <h1>
+
+            Hello, I'm
+
+            <span>
+                Abdullo.
+            </span>
+
+            <br>
+
+            I build digital
+            <span>
+                experiences.
+            </span>
+
+        </h1>
+
+
+        <p class="hero-description">
+
+            Computer Science & Information Systems student at
+            KIMEP University, passionate about software development,
+            data, mobile applications and modern web technologies.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a
+                href="#projects"
+                class="primary-button"
+            >
+
+                <i class="fa-solid fa-code"></i>
+
+                View My Projects
+
+            </a>
+
+
+            <a
+                href="#contact"
+                class="secondary-button"
+            >
+
+                Contact Me
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+        <!-- Social Links -->
+
+        <div class="social-links">
+
+            <a
+                href="https://github.com/"
+                target="_blank"
+                aria-label="GitHub"
+            >
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a
+                href="https://www.linkedin.com/"
+                target="_blank"
+                aria-label="LinkedIn"
+            >
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+
+            <a
+                href="#contact"
+                aria-label="Email"
+            >
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- Hero Visual -->
+
+    <div class="hero-visual">
+
+        <div class="glass-profile">
+
+            <div class="profile-glow"></div>
+
+            <div class="large-avatar">
+                A
+            </div>
+
+            <h2>
+                Abdullo Qadridinov
+            </h2>
+
+            <p>
+                Computer Science Student
+            </p>
+
+
+            <div class="mini-stats">
+
+                <div>
+                    <strong>
+                        2027
+                    </strong>
+
+                    <span>
+                        Graduation
+                    </span>
+                </div>
+
+
+                <div>
+                    <strong>
+                        3.24
+                    </strong>
+
+                    <span>
+                        GPA
+                    </span>
+                </div>
+
+
+                <div>
+                    <strong>
+                        8+
+                    </strong>
+
+                    <span>
+                        Projects
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section
+    class="section"
+    id="about"
+>
+
+    <div class="section-heading">
+
+        <span>
+            01
+        </span>
+
+        <div>
+            <p>
+                GET TO KNOW ME
+            </p>
+
+            <h2>
+                About Me
+            </h2>
+        </div>
+
+    </div>
+
+
+    <div class="about-grid">
+
+        <div class="about-text glass-panel">
+
+            <h3>
+                Turning ideas into technology.
+            </h3>
+
+            <p>
+
+                I'm Abdullo Qadridinov, a Computer Science and
+                Information Systems student at KIMEP University.
+
+            </p>
+
+            <p>
+
+                I enjoy building applications and solving
+                real-world problems using programming,
+                databases, data analytics and modern web
+                technologies.
+
+            </p>
+
+            <p>
+
+                My current focus is developing stronger
+                software engineering skills and building
+                practical projects that demonstrate what
+                I can create.
+
+            </p>
+
+        </div>
+
+
+        <div class="about-cards">
+
+            <div class="info-card glass-panel">
+
+                <div class="info-icon purple">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+
+                <div>
+                    <h4>
+                        Development
+                    </h4>
+
+                    <p>
+                        Web, mobile and software development
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="info-card glass-panel">
+
+                <div class="info-icon blue">
+                    <i class="fa-solid fa-database"></i>
+                </div>
+
+                <div>
+                    <h4>
+                        Data
+                    </h4>
+
+                    <p>
+                        Analytics, databases and visualization
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="info-card glass-panel">
+
+                <div class="info-icon pink">
+                    <i class="fa-solid fa-lightbulb"></i>
+                </div>
+
+                <div>
+                    <h4>
+                        Problem Solving
+                    </h4>
+
+                    <p>
+                        Turning complex ideas into useful solutions
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section
+    class="section"
+    id="projects"
+>
+
+    <div class="section-heading">
+
+        <span>
+            02
+        </span>
+
+        <div>
+
+            <p>
+                MY WORK
+            </p>
+
+            <h2>
+                Featured Projects
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="project-filters">
+
+        <button
+            class="filter-button active"
+            data-filter="all"
+        >
+            All
+        </button>
+
+        <button
+            class="filter-button"
+            data-filter="web"
+        >
+            Web
+        </button>
+
+        <button
+            class="filter-button"
+            data-filter="mobile"
+        >
+            Mobile
+        </button>
+
+        <button
+            class="filter-button"
+            data-filter="data"
+        >
+            Data
+        </button>
+
+    </div>
+
+    <div class="projects-grid">
+
+        <article
+            class="project-card glass-panel"
+            data-category="mobile"
+        >
+
+            <div class="project-top">
+
+                <div class="project-icon">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                </div>
+
+                <span>
+                    MOBILE
+                </span>
+
+            </div>
+
+
+            <h3>
+                City Companion
+            </h3>
+
+            <p>
+
+                A Flutter mobile application designed to
+                help users explore a city through maps,
+                authentication, QR scanning and useful
+                travel features.
+
+            </p>
+
+
+            <div class="project-tech">
+
+                <span>Flutter</span>
+                <span>Dart</span>
+                <span>Firebase</span>
+                <span>BLoC</span>
+
+            </div>
+
+
+            <button
+                class="project-link"
+                data-project="city"
+            >
+
+                View Project
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </article>
+
+        <article
+            class="project-card glass-panel"
+            data-category="web"
+        >
+
+            <div class="project-top">
+
+                <div class="project-icon">
+                    <i class="fa-solid fa-store"></i>
+                </div>
+
+                <span>
+                    WEB
+                </span>
+
+            </div>
+
+
+            <h3>
+                Bookstore Website
+            </h3>
+
+            <p>
+
+                A responsive bookstore website with
+                multiple categories, navigation,
+                Bootstrap components and interactive
+                web pages.
+
+            </p>
+
+
+            <div class="project-tech">
+
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Bootstrap</span>
+
+            </div>
+
+
+            <button
+                class="project-link"
+                data-project="bookstore"
+            >
+
+                View Project
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </article>
+
+        <article
+            class="project-card glass-panel"
+            data-category="data"
+        >
+
+            <div class="project-top">
+
+                <div class="project-icon">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+
+                <span>
+                    DATA
+                </span>
+
+            </div>
+
+
+            <h3>
+                IMDB Data Analysis
+            </h3>
+
+            <p>
+
+                Exploratory data analysis of the global
+                media landscape using Python, pandas,
+                feature engineering and data visualization.
+
+            </p>
+
+
+            <div class="project-tech">
+
+                <span>Python</span>
+                <span>Pandas</span>
+                <span>EDA</span>
+                <span>Data</span>
+
+            </div>
+
+
+            <button
+                class="project-link"
+                data-project="imdb"
+            >
+
+                View Project
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </article>
+
+        <article
+            class="project-card glass-panel"
+            data-category="data"
+        >
+
+            <div class="project-top">
+
+                <div class="project-icon">
+                    <i class="fa-solid fa-robot"></i>
+                </div>
+
+                <span>
+                    DATA / AI
+                </span>
+
+            </div>
+
+
+            <h3>
+                Dataset Explorer
+            </h3>
+
+            <p>
+
+                An interactive web application for uploading
+                datasets, performing automated exploratory
+                analysis and generating useful insights.
+
+            </p>
+
+
+            <div class="project-tech">
+
+                <span>Python</span>
+                <span>FastAPI</span>
+                <span>Pandas</span>
+                <span>AI</span>
+
+            </div>
+
+
+            <button
+                class="project-link"
+                data-project="dataset"
+            >
+
+                View Project
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </article>
+
+
+        <article
+            class="project-card glass-panel"
+            data-category="web"
+        >
+
+            <div class="project-top">
+
+                <div class="project-icon">
+                    <i class="fa-solid fa-window-maximize"></i>
+                </div>
+
+                <span>
+                    WEB
+                </span>
+
+            </div>
+
+
+            <h3>
+                Interactive Portfolio
+            </h3>
+
+            <p>
+
+                A modern personal portfolio with a glassmorphism
+                interface, responsive navigation and interactive
+                components.
+
+            </p>
+
+
+            <div class="project-tech">
+
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+
+            </div>
+
+
+            <button
+                class="project-link"
+                data-project="portfolio"
+            >
+
+                View Project
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </article>
+
+        <article
+            class="project-card glass-panel"
+            data-category="web"
+        >
+
+            <div class="project-top">
+
+                <div class="project-icon">
+                    <i class="fa-solid fa-chart-pie"></i>
+                </div>
+
+                <span>
+                    WEB
+                </span>
+
+            </div>
+
+
+            <h3>
+                Analytics Dashboard
+            </h3>
+
+            <p>
+
+                A modern dashboard concept for displaying
+                business information, statistics and
+                interactive visual elements.
+
+            </p>
+
+
+            <div class="project-tech">
+
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+
+            </div>
+
+
+            <button
+                class="project-link"
+                data-project="dashboard"
+            >
+
+                View Project
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </article>
+
+    </div>
+
+</section>
+
+<section
+    class="section"
+    id="skills"
+>
+
+    <div class="section-heading">
+
+        <span>
+            03
+        </span>
+
+        <div>
+
+            <p>
+                TECHNOLOGIES
+            </p>
+
+            <h2>
+                My Skills
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="skills-container">
+
+        <div class="skill glass-panel">
+
+            <div class="skill-header">
+
+                <div>
+                    <i class="fa-brands fa-js"></i>
+                    JavaScript
+                </div>
+
+                <span>
+                    80%
+                </span>
+
+            </div>
+
+            <div class="progress">
+                <div
+                    class="progress-bar"
+                    style="width: 80%"
+                ></div>
+            </div>
+
+        </div>
+
+
+        <div class="skill glass-panel">
+
+            <div class="skill-header">
+
+                <div>
+                    <i class="fa-brands fa-python"></i>
+                    Python
+                </div>
+
+                <span>
+                    82%
+                </span>
+
+            </div>
+
+            <div class="progress">
+                <div
+                    class="progress-bar"
+                    style="width: 82%"
+                ></div>
+            </div>
+
+        </div>
+
+
+        <div class="skill glass-panel">
+
+            <div class="skill-header">
+
+                <div>
+                    <i class="fa-brands fa-java"></i>
+                    Java
+                </div>
+
+                <span>
+                    75%
+                </span>
+
+            </div>
+
+            <div class="progress">
+                <div
+                    class="progress-bar"
+                    style="width: 75%"
+                ></div>
+            </div>
+
+        </div>
+
+
+        <div class="skill glass-panel">
+
+            <div class="skill-header">
+
+                <div>
+                    <i class="fa-brands fa-html5"></i>
+                    HTML / CSS
+                </div>
+
+                <span>
+                    90%
+                </span>
+
+            </div>
+
+            <div class="progress">
+                <div
+                    class="progress-bar"
+                    style="width: 90%"
+                ></div>
+            </div>
+
+        </div>
+
+
+        <div class="skill glass-panel">
+
+            <div class="skill-header">
+
+                <div>
+                    <i class="fa-solid fa-database"></i>
+                    SQL / Databases
+                </div>
+
+                <span>
+                    78%
+                </span>
+
+            </div>
+
+            <div class="progress">
+                <div
+                    class="progress-bar"
+                    style="width: 78%"
+                ></div>
+            </div>
+
+        </div>
+
+
+        <div class="skill glass-panel">
+
+            <div class="skill-header">
+
+                <div>
+                    <i class="fa-brands fa-flutter"></i>
+                    Flutter / Dart
+                </div>
+
+                <span>
+                    75%
+                </span>
+
+            </div>
+
+            <div class="progress">
+                <div
+                    class="progress-bar"
+                    style="width: 75%"
+                ></div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="technology-list">
+
+        <span>Git</span>
+        <span>GitHub</span>
+        <span>MongoDB</span>
+        <span>MySQL</span>
+        <span>Firebase</span>
+        <span>Bootstrap</span>
+        <span>Pandas</span>
+        <span>FastAPI</span>
+        <span>Power BI</span>
+        <span>Excel</span>
+
+    </div>
+
+</section>
+
+<section
+    class="section"
+    id="education"
+>
+
+    <div class="section-heading">
+
+        <span>
+            04
+        </span>
+
+        <div>
+
+            <p>
+                MY JOURNEY
+            </p>
+
+            <h2>
+                Education
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content glass-panel">
+
+                <span class="timeline-date">
+                    2023 — 2027
+                </span>
+
+                <h3>
+                    KIMEP University
+                </h3>
+
+                <h4>
+                    Computer Science & Information Systems
+                </h4>
+
+                <p>
+
+                    Bachelor's degree focused on computer science,
+                    information systems, software development,
+                    databases, data analytics and technology.
+
+                </p>
+
+                <div class="education-stats">
+
+                    <div>
+                        <strong>
+                            3.24
+                        </strong>
+
+                        <span>
+                            Current GPA
+                        </span>
+                    </div>
+
+                    <div>
+                        <strong>
+                            2027
+                        </strong>
+
+                        <span>
+                            Expected Graduation
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section
+    class="section"
+    id="contact"
+>
+
+    <div class="section-heading">
+
+        <span>
+            05
+        </span>
+
+        <div>
+
+            <p>
+                GET IN TOUCH
+            </p>
+
+            <h2>
+                Contact Me
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="contact-grid">
+
+
+        <div class="contact-info">
+
+            <h3>
+                Let's work together.
+            </h3>
+
+            <p>
+
+                Have a project, internship opportunity or
+                interesting idea? Send me a message.
+
+            </p>
+
+
+            <div class="contact-method">
+
+                <div class="contact-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+
+                <div>
+                    <span>
+                        Email
+                    </span>
+
+                    <strong>
+                        Send me a message
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="contact-method">
+
+                <div class="contact-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+
+                <div>
+                    <span>
+                        Location
+                    </span>
+
+                    <strong>
+                        Almaty, Kazakhstan
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="contact-method">
+
+                <div class="contact-icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+
+                <div>
+                    <span>
+                        University
+                    </span>
+
+                    <strong>
+                        KIMEP University
+                    </strong>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <form
+            class="contact-form glass-panel"
+            id="contactForm"
+        >
+
+            <div class="form-group">
+
+                <label for="name">
+                    Your Name
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="email">
+                    Your Email
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="message">
+                    Message
+                </label>
+
+                <textarea
+                    id="message"
+                    rows="6"
+                    placeholder="Write your message..."
+                    required
+                ></textarea>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="primary-button send-button"
+            >
+
+                <i class="fa-solid fa-paper-plane"></i>
+
+                Send Message
+
+            </button>
+
+
+            <p
+                class="form-message"
+                id="formMessage"
+            ></p>
+
+        </form>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <div class="footer-logo">
+
+        <div class="logo-icon">
+            A
+        </div>
+
+        <strong>
+            Abdullo<span>.</span>
+        </strong>
+
+    </div>
+
+
+    <p>
+        Designed & built by Abdullo Qadridinov
+    </p>
+
+
+    <div class="footer-socials">
+
+        <a
+            href="https://github.com/"
+            target="_blank"
+        >
+            <i class="fa-brands fa-github"></i>
+        </a>
+
+        <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+        >
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+
+    </div>
+
+</footer>
+
+</main>
+
+
+<div
+    class="modal"
+    id="projectModal"
+>
+
+    <div class="modal-content glass-panel">
+
+        <button
+            class="modal-close"
+            id="modalClose"
+        >
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div
+            class="modal-icon"
+            id="modalIcon"
+        >
+            <i class="fa-solid fa-code"></i>
+        </div>
+
+        <span
+            class="modal-category"
+            id="modalCategory"
+        >
+            PROJECT
+        </span>
+
+        <h2 id="modalTitle">
+            Project
+        </h2>
+
+        <p id="modalDescription">
+            Project description.
+        </p>
+
+        <div
+            class="modal-technologies"
+            id="modalTechnologies"
+        ></div>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
