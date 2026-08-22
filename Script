@@ -1,0 +1,755 @@
+/* =========================================
+   SIDEBAR
+========================================= */
+
+const sidebar =
+    document.getElementById("sidebar");
+
+const mobileMenu =
+    document.getElementById("mobileMenu");
+
+const closeSidebarButton =
+    document.getElementById("closeSidebar");
+
+const overlay =
+    document.getElementById("overlay");
+
+
+/* Open sidebar */
+
+function openSidebar() {
+
+    sidebar.classList.add("open");
+
+    overlay.classList.add("show");
+
+    document.body.style.overflow = "hidden";
+}
+
+
+/* Close sidebar */
+
+function closeSidebar() {
+
+    sidebar.classList.remove("open");
+
+    overlay.classList.remove("show");
+
+    document.body.style.overflow = "";
+}
+
+
+/* Mobile menu */
+
+mobileMenu.addEventListener(
+    "click",
+    openSidebar
+);
+
+
+/* Close button */
+
+closeSidebarButton.addEventListener(
+    "click",
+    closeSidebar
+);
+
+
+/* Overlay */
+
+overlay.addEventListener(
+    "click",
+    closeSidebar
+);
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+const navLinks =
+    document.querySelectorAll(".nav-link");
+
+
+navLinks.forEach((link) => {
+
+    link.addEventListener(
+        "click",
+        function () {
+
+            if (
+                this.getAttribute("href") === "#"
+            ) {
+                return;
+            }
+
+
+            navLinks.forEach((item) => {
+
+                item.classList.remove("active");
+
+            });
+
+
+            if (
+                this.getAttribute("href")
+                &&
+                this.getAttribute("href")
+                    .startsWith("#")
+            ) {
+
+                this.classList.add("active");
+
+            }
+
+
+            if (
+                window.innerWidth <= 760
+            ) {
+
+                closeSidebar();
+
+            }
+
+        }
+    );
+
+});
+
+
+/* =========================================
+   ACTIVE SECTION WHILE SCROLLING
+========================================= */
+
+const sections =
+    document.querySelectorAll(
+        "section[id]"
+    );
+
+
+window.addEventListener(
+    "scroll",
+    () => {
+
+        let currentSection = "";
+
+        sections.forEach((section) => {
+
+            const sectionTop =
+                section.offsetTop - 200;
+
+            if (
+                window.scrollY >= sectionTop
+            ) {
+
+                currentSection =
+                    section.getAttribute("id");
+
+            }
+
+        });
+
+
+        navLinks.forEach((link) => {
+
+            link.classList.remove("active");
+
+            const href =
+                link.getAttribute("href");
+
+            if (
+                href === "#" + currentSection
+            ) {
+
+                link.classList.add("active");
+
+            }
+
+        });
+
+    }
+);
+
+
+/* =========================================
+   THEME
+========================================= */
+
+const themeToggle =
+    document.getElementById("themeToggle");
+
+const themeIcon =
+    document.getElementById("themeIcon");
+
+
+const savedTheme =
+    localStorage.getItem("portfolioTheme");
+
+
+if (savedTheme === "light") {
+
+    document.body.classList.add(
+        "light-theme"
+    );
+
+    themeIcon.className =
+        "fa-solid fa-sun";
+}
+
+
+themeToggle.addEventListener(
+    "click",
+    () => {
+
+        document.body.classList.toggle(
+            "light-theme"
+        );
+
+
+        const isLight =
+            document.body.classList.contains(
+                "light-theme"
+            );
+
+
+        if (isLight) {
+
+            localStorage.setItem(
+                "portfolioTheme",
+                "light"
+            );
+
+            themeIcon.className =
+                "fa-solid fa-sun";
+
+        } else {
+
+            localStorage.setItem(
+                "portfolioTheme",
+                "dark"
+            );
+
+            themeIcon.className =
+                "fa-solid fa-moon";
+
+        }
+
+    }
+);
+
+
+/* =========================================
+   PROJECT FILTER
+========================================= */
+
+const filterButtons =
+    document.querySelectorAll(
+        ".filter-button"
+    );
+
+const projectCards =
+    document.querySelectorAll(
+        ".project-card"
+    );
+
+
+filterButtons.forEach((button) => {
+
+    button.addEventListener(
+        "click",
+        () => {
+
+            filterButtons.forEach(
+                (item) => {
+
+                    item.classList.remove(
+                        "active"
+                    );
+
+                }
+            );
+
+
+            button.classList.add(
+                "active"
+            );
+
+
+            const filter =
+                button.dataset.filter;
+
+
+            projectCards.forEach(
+                (card) => {
+
+                    const category =
+                        card.dataset.category;
+
+
+                    if (
+                        filter === "all"
+                        ||
+                        category === filter
+                    ) {
+
+                        card.classList.remove(
+                            "hidden"
+                        );
+
+                    } else {
+
+                        card.classList.add(
+                            "hidden"
+                        );
+
+                    }
+
+                }
+            );
+
+        }
+    );
+
+});
+
+
+/* =========================================
+   PROJECT DATA
+========================================= */
+
+const projects = {
+
+    city: {
+
+        title: "City Companion",
+
+        category: "Mobile Application",
+
+        icon:
+            "fa-solid fa-mobile-screen-button",
+
+        description:
+            "A Flutter mobile application designed to help users explore a city through maps, authentication, QR scanning and useful travel features. The project combines Firebase authentication, BLoC state management, APIs and modern mobile UI.",
+
+        technologies: [
+            "Flutter",
+            "Dart",
+            "Firebase",
+            "BLoC",
+            "Google Maps",
+            "QR Scanner"
+        ]
+
+    },
+
+
+    bookstore: {
+
+        title: "Bookstore Website",
+
+        category: "Web Development",
+
+        icon:
+            "fa-solid fa-store",
+
+        description:
+            "A responsive bookstore website containing a homepage, pricing page, contacts, about page, form and multiple book categories. The project uses Bootstrap together with HTML, CSS and JavaScript.",
+
+        technologies: [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Bootstrap",
+            "Responsive Design"
+        ]
+
+    },
+
+
+    imdb: {
+
+        title: "IMDB Data Analysis",
+
+        category: "Data Analytics",
+
+        icon:
+            "fa-solid fa-chart-line",
+
+        description:
+            "An exploratory analysis project focused on understanding the global media landscape. The workflow includes data cleaning, feature engineering, genre analysis and trend exploration using Python.",
+
+        technologies: [
+            "Python",
+            "Pandas",
+            "Data Cleaning",
+            "EDA",
+            "Data Visualization"
+        ]
+
+    },
+
+
+    dataset: {
+
+        title: "Interactive Dataset Explorer",
+
+        category: "Data / AI",
+
+        icon:
+            "fa-solid fa-robot",
+
+        description:
+            "An interactive web application designed for uploading CSV or Excel datasets, previewing data, performing automated exploratory analysis and generating useful analytical insights.",
+
+        technologies: [
+            "Python",
+            "FastAPI",
+            "Pandas",
+            "JavaScript",
+            "AI"
+        ]
+
+    },
+
+
+    portfolio: {
+
+        title: "Personal Portfolio",
+
+        category: "Web Development",
+
+        icon:
+            "fa-solid fa-window-maximize",
+
+        description:
+            "A modern glassmorphism personal portfolio website with responsive navigation, project filtering, theme switching, animated interface elements and an interactive contact section.",
+
+        technologies: [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Glassmorphism",
+            "Responsive Design"
+        ]
+
+    },
+
+
+    dashboard: {
+
+        title: "Analytics Dashboard",
+
+        category: "Web Development",
+
+        icon:
+            "fa-solid fa-chart-pie",
+
+        description:
+            "A modern dashboard interface designed to display statistics, business information and interactive visual components in a clean glassmorphism environment.",
+
+        technologies: [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "UI Design"
+        ]
+
+    }
+
+};
+
+
+/* =========================================
+   PROJECT MODAL
+========================================= */
+
+const projectModal =
+    document.getElementById(
+        "projectModal"
+    );
+
+const modalClose =
+    document.getElementById(
+        "modalClose"
+    );
+
+const modalTitle =
+    document.getElementById(
+        "modalTitle"
+    );
+
+const modalCategory =
+    document.getElementById(
+        "modalCategory"
+    );
+
+const modalDescription =
+    document.getElementById(
+        "modalDescription"
+    );
+
+const modalIcon =
+    document.getElementById(
+        "modalIcon"
+    );
+
+const modalTechnologies =
+    document.getElementById(
+        "modalTechnologies"
+    );
+
+
+const projectButtons =
+    document.querySelectorAll(
+        ".project-link"
+    );
+
+
+projectButtons.forEach((button) => {
+
+    button.addEventListener(
+        "click",
+        () => {
+
+            const projectID =
+                button.dataset.project;
+
+            const project =
+                projects[projectID];
+
+
+            if (!project) {
+                return;
+            }
+
+
+            modalTitle.textContent =
+                project.title;
+
+            modalCategory.textContent =
+                project.category;
+
+            modalDescription.textContent =
+                project.description;
+
+
+            modalIcon.innerHTML =
+                `<i class="${project.icon}"></i>`;
+
+
+            modalTechnologies.innerHTML =
+                "";
+
+
+            project.technologies.forEach(
+                (technology) => {
+
+                    const tag =
+                        document.createElement(
+                            "span"
+                        );
+
+                    tag.textContent =
+                        technology;
+
+                    modalTechnologies.appendChild(
+                        tag
+                    );
+
+                }
+            );
+
+
+            projectModal.classList.add(
+                "show"
+            );
+
+            document.body.style.overflow =
+                "hidden";
+
+        }
+    );
+
+});
+
+
+/* Close modal */
+
+function closeProjectModal() {
+
+    projectModal.classList.remove(
+        "show"
+    );
+
+    document.body.style.overflow =
+        "";
+}
+
+
+modalClose.addEventListener(
+    "click",
+    closeProjectModal
+);
+
+
+/* Click outside modal */
+
+projectModal.addEventListener(
+    "click",
+    (event) => {
+
+        if (
+            event.target ===
+            projectModal
+        ) {
+
+            closeProjectModal();
+
+        }
+
+    }
+);
+
+
+/* ESC closes modal */
+
+document.addEventListener(
+    "keydown",
+    (event) => {
+
+        if (event.key === "Escape") {
+
+            closeProjectModal();
+
+            closeSidebar();
+
+        }
+
+    }
+);
+
+
+/* =========================================
+   CONTACT FORM
+========================================= */
+
+const contactForm =
+    document.getElementById(
+        "contactForm"
+    );
+
+const formMessage =
+    document.getElementById(
+        "formMessage"
+    );
+
+
+contactForm.addEventListener(
+    "submit",
+    (event) => {
+
+        event.preventDefault();
+
+
+        const name =
+            document.getElementById(
+                "name"
+            ).value.trim();
+
+        const email =
+            document.getElementById(
+                "email"
+            ).value.trim();
+
+        const message =
+            document.getElementById(
+                "message"
+            ).value.trim();
+
+
+        if (
+            !name
+            ||
+            !email
+            ||
+            !message
+        ) {
+
+            formMessage.textContent =
+                "Please fill in all fields.";
+
+            return;
+
+        }
+
+
+        /*
+            This creates an email message
+            using the visitor's email app.
+        */
+
+        const subject =
+            encodeURIComponent(
+                "Portfolio Contact from " +
+                name
+            );
+
+
+        const body =
+            encodeURIComponent(
+                "Name: " +
+                name +
+                "\n\nEmail: " +
+                email +
+                "\n\nMessage:\n" +
+                message
+            );
+
+
+        /*
+            Replace this email address
+            with your real email address.
+        */
+
+        const yourEmail =
+            "YOUR_EMAIL@example.com";
+
+
+        window.location.href =
+            `mailto:${yourEmail}?subject=${subject}&body=${body}`;
+
+
+        formMessage.textContent =
+            "Opening your email application...";
+
+    }
+);
+
+
+/* =========================================
+   CLOSE SIDEBAR WHEN RESIZING
+========================================= */
+
+window.addEventListener(
+    "resize",
+    () => {
+
+        if (
+            window.innerWidth > 760
+        ) {
+
+            closeSidebar();
+
+        }
+
+    }
+);
+
+
+/* =========================================
+   CONSOLE MESSAGE
+========================================= */
+
+console.log(
+    "Abdullo Qadridinov Portfolio loaded successfully."
+);
